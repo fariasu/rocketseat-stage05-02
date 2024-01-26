@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+    --color-text-color: #323238;
+    --color-button-background: #E1E1E6;
+    --color-button-background-hover: #aeaeae;
+    --color-button-isPlaying: #02799D;
+}
+
+.flex {
+    display: flex;
+}
+
+span {
+    font-size: 12.6rem;
+    color: var(--color-text-color);
+    font-weight: 600;
+}
+
+#app {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    gap: 19.2rem;
+}
+
+
+#timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#controls {
+    display: flex;
+    gap: 4rem;
+}
+
+#sounds-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
+}
+
+button {
+    border: none;
+    gap: 3.2rem;
+    background: #fff;
+    border: none;
+    font-size: 4.8rem;
+    transition: background .3s;
+}
+
+#controls button {
+    transition: transform .3s;
+}
+
+#controls button:hover {
+    transform: scale(1.2);
+}
+
+#sounds-wrapper button {
+    background: var(--color-button-background);
+    padding: 3.2rem;
+    border-radius: 2rem;
+}
+
+#sounds-wrapper button:hover {
+    background: var(--color-button-background-hover);
+}
+
+.isPlaying {
+    background: var(--color-button-isPlaying) !important;
+    color: var(--color-button-background);
+}
+
+.running .ph-play,
+html:not(.running) .ph-pause {
+    display: none;
+}

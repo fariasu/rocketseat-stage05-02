@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer - Pomodoro</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+
+    <div id="app">
+        <section>
+            <div id="timer-wrapper">
+                <div id="timer" class="flex">
+                    <span id="minutes">25</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </div>
+                <div id="controls">
+                    <button data-action="toggleRunning" class="ph ph-play"></button>
+                    <button data-action="toggleRunning" class="ph ph-pause"></button>
+                    <button data-action="reset" class="ph ph-stop"></button>
+                    <button data-action="add" class="ph ph-plus"></button>
+                    <button data-action="subtract" class="ph ph-minus"></button>
+                </div>
+            </div>
+    
+            <div id="sounds-wrapper">
+                <button data-action="toggleForest" class="ph ph-tree"></button>
+                <button data-action="toggleRain" class="ph ph-cloud-rain"></button>
+                <button data-action="toggleStore" class="ph ph-storefront"></button>
+                <button data-action="toggleCampfire" class="ph ph-campfire"></button>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
